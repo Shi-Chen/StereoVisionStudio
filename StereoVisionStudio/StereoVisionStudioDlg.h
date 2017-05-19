@@ -16,6 +16,8 @@
 #include <io.h> 
 #include "ConvertUtility.h"
 #include "StereoCalib.h"
+#include "StereoMatch.h"
+#include "tinyxml.h" 
 
 using namespace std;
 using namespace cv;
@@ -113,4 +115,13 @@ public:
 	CString m_editPrjPath;
 	afx_msg void OnBnClickedBtnStopMatch();
 	afx_msg void OnBnClickedSelectPrj();
+	afx_msg void OnBnClickedBtnDefaultMatch();
+	long m_editMaxDiff;
+	long m_editMinDisparity;
+	long m_editPreCap;
+	long m_editSpeckleRange;
+	long m_editSpeckeWinSize;
+	long m_editTextThres;
+	long m_editUniqeRatio;
+	afx_msg void OnBnClickedBtnSelectPrjCal();
 };
